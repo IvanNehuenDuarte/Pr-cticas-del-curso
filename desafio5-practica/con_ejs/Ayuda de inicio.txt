@@ -1,0 +1,7 @@
+// Para empezar
+
+Npm init
+Npm i express
+Npm i nodemon
+Npm i ejs
+

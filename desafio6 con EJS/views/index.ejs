@@ -1,0 +1,43 @@
+<%- include('template/head', {tituloWeb: 'Página de inicio'}) %>
+
+<body class="container">
+  <%- include('template/body') %> 
+  <% if (data.length) { %> 
+  <% data.forEach((product) => { %>
+  <div class="panel panel-primary">
+    <img
+      class="card-img-right"
+      src="<%= product.imagen %>"
+      width="70px"
+      height="70px"
+      style="float: right;"
+    />
+    <div class="panel-heading"><b>Nombre: </b> <%= product.nombre %></div>
+    <div class="panel panel-body"><b>Precio: </b> <%= product.precio %></div>
+    <hr />
+    <br />
+  </div>
+  <% }) %> <% } %>
+
+  <h1 style="text-align: center; margin-top: 1em">Chat:</h1>
+
+  <div id="message" class="container"></div>
+
+  <form
+    onsubmit="addMessage(this)"
+    class="panel"
+    style="text-align: center; margin-top: 1em"
+  >
+    <input
+      type="text"
+      id="userName"
+      placeholder="Ingresa tu nombre"
+      autofocus
+    />
+    <input type="text" id="texto" placeholder="Di algo" />
+    <input type="submit" value="Enviar" />
+  </form>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="socket.js"></script>
+</body>

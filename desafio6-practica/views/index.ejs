@@ -1,0 +1,54 @@
+<%- include('template/head', {tituloWeb: 'Página de inicio'}) %>
+<body>
+    <div style="text-align: center; margin-bottom: 1em; text-decoration: underline;" >
+        <h1>Productos</h1>
+    </div>
+    
+
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col md-4 my-auto">
+                <form class="card card-body rounded-0" id="productForm">
+                    <h1 class="h3 mb-5" style="color: black;">Agregar nuevo producto</h1>
+
+                    <input type="text" id="title" name="title" placeholder="Escribe el titulo de producto" class="form-control rounded-0 mb-3" autofocus required>
+
+                    <input type="number" id="price" name="price" placeholder="Precio del producto" class="form-control rounded-0 mb-3" required>
+                    
+                    <input accept="url/*" type="url" name="img" id="img" placeholder="URL de la imagen del producto"  class="form-control rounded-0 mb-3" required>
+
+                    <button class="btn btn-dark rounded-0">Send</button>
+                </form>
+            </div>
+            <div class="col-md-8">
+                <div id="products"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <h1 style="text-align: center; margin-top: 1em">Chat:</h1>
+
+  <div id="message" class="container"></div>
+
+  <form
+    onsubmit="addMessage(this)"
+    class="panel"
+    style="text-align: center; margin-top: 1em"
+  >
+    <input
+      type="text"
+      id="userName"
+      placeholder="Ingresa tu nombre"
+      autofocus
+    />
+    <input type="text" id="texto" placeholder="Di algo" />
+    <input type="submit" value="Enviar" />
+  </form>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="ui.js"></script>
+<script src="socket.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

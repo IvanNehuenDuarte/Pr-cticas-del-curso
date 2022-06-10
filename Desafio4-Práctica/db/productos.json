@@ -1,0 +1,22 @@
+[
+    {
+        "Titulo": "Gabinete",
+        "Precio": 10000,
+        "id": 1
+    },
+    {
+        "Titulo": "Motherboard",
+        "Precio": 20000,
+        "id": 2
+    },
+    {
+        "Titulo": "Procesador",
+        "Precio": 25000,
+        "id": 3
+    },
+    {
+        "Titulo": "Ram",
+        "Precio": 7000,
+        "id": 4
+    }
+]

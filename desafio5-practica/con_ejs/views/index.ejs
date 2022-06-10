@@ -1,0 +1,21 @@
+<%- include('template/cabecera', {tituloWeb: 'Página de inicio'}) %>
+
+<body class="container">
+  <%- include('template/cuerpo') %> 
+  <% if (data.length) { %> <%
+  data.forEach((product) => {%>
+  <div class="panel panel-primary">
+    <img
+      class="card-img-rigth"
+      src="<%= product.imagen %> "
+      width="70px"
+      height="70px"
+      style="float: right"
+    />
+    <div class="panel-heading"><b>Nombre: </b><%= product.nombre %></div>
+    <br />
+    <div class="panel panel-body"><b>Precio: </b><%= product.precio %></div>
+  </div>
+  <hr />
+  <% }) %> <% } %>
+</body>

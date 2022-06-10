@@ -1,0 +1,26 @@
+doctype html
+html(lang="es")
+    include ./partials/head
+    +head("Página de productos con pug")
+
+    body
+        include ./partials/navbar
+        div(class="col-xs-8 col-xs-offset-2")
+            h2(class="text-center") Escribe un nuevo producto 
+        form(method="post")
+            div(class="form-group")
+                label(for="nombre") Nombre
+                input(type="text" name="nombre" id="nombre" class="form-control" placeholder="Ingresa un nuevo titulo" required)
+        br
+        div(class="form-group")
+            label(for="precio") Precio del producto
+            br 
+            input(type="number" name="precio" id="precio" class="form-class" placeholder="Ingrese precio" required)
+        br
+        div(class="form-group")
+            label(for="imagen") URL de la imagen del producto
+            br 
+            input(accept="url/*" type="url" name="imagen" id="imagen" class="form-class" required)
+        br
+        div(class="form-group")
+            input(type="submit" value="Subir" class="btn btn-primary")
